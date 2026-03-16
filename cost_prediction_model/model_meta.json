@@ -1,0 +1,86 @@
+{
+  "model_name": "XGBoost",
+  "model_type": "XGBRegressor",
+  "feature_count": 321,
+  "training_samples": 3092,
+  "test_samples": 774,
+  "total_samples": 3866,
+  "target": "price_pkr",
+  "target_transform": "log1p",
+  "metrics": {
+    "RandomForest": {
+      "mae": 16348.95,
+      "rmse": 52209.4226,
+      "r2": 0.5739,
+      "mape": 62.7451,
+      "median_ae": 1724.2777
+    },
+    "HistGradientBoosting": {
+      "mae": 12554.526,
+      "rmse": 39409.6388,
+      "r2": 0.7572,
+      "mape": 53.9209,
+      "median_ae": 1448.0038
+    },
+    "GradientBoosting": {
+      "mae": 12210.2268,
+      "rmse": 37854.8012,
+      "r2": 0.776,
+      "mape": 47.7296,
+      "median_ae": 1360.0875
+    },
+    "XGBoost": {
+      "mae": 11641.3659,
+      "rmse": 36494.9095,
+      "r2": 0.7918,
+      "mape": 48.6074,
+      "median_ae": 1221.8602
+    }
+  },
+  "best_model_metrics": {
+    "mae": 11641.3659,
+    "rmse": 36494.9095,
+    "r2": 0.7918,
+    "mape": 48.6074,
+    "median_ae": 1221.8602
+  },
+  "categorical_features": [
+    "part_brand",
+    "scraped_category",
+    "compatible_make",
+    "compatible_model",
+    "condition",
+    "part_type"
+  ],
+  "numeric_features": [
+    "year_from",
+    "year_to",
+    "price_original_pkr",
+    "alternatives_count",
+    "year_span",
+    "has_year",
+    "is_universal",
+    "has_discount",
+    "name_word_count",
+    "compatible_make_freq",
+    "compatible_model_freq",
+    "part_brand_freq",
+    "scraped_category_freq",
+    "scraped_category_price_mean",
+    "compatible_make_price_mean"
+  ],
+  "text_feature": "part_name",
+  "excluded_columns": [
+    "available",
+    "website",
+    "product_url",
+    "description"
+  ],
+  "price_stats": {
+    "mean": 34752.52,
+    "median": 6500.0,
+    "min": 250.0,
+    "max": 800000.0,
+    "std": 87910.96
+  }
+}
